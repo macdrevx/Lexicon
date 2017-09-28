@@ -32,6 +32,8 @@
 		49F9E4A81F7DA18C00DA4D3A /* ListStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A71F7DA18C00DA4D3A /* ListStateTests.swift */; };
 		49F9E4AA1F7DA29500DA4D3A /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A91F7DA29500DA4D3A /* ListViewControllerTests.swift */; };
 		49F9E4AD1F7DA48D00DA4D3A /* MockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */; };
+		49F9E4B01F7DA59E00DA4D3A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F9E4AF1F7DA59E00DA4D3A /* Detail.storyboard */; };
+		49F9E4B21F7DA5B000DA4D3A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4B11F7DA5B000DA4D3A /* DetailViewController.swift */; };
 		EB57CFAB97E8110348DDC1C6 /* Pods_Lexicon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532746F3622DA13687E41D3 /* Pods_Lexicon.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		49F9E4A71F7DA18C00DA4D3A /* ListStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStateTests.swift; sourceTree = "<group>"; };
 		49F9E4A91F7DA29500DA4D3A /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
 		49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListPresenter.swift; sourceTree = "<group>"; };
+		49F9E4AF1F7DA59E00DA4D3A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		49F9E4B11F7DA5B000DA4D3A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C814C431173AE54FCFD43FC /* Pods_LexiconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexiconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		49F292511F7D8BD000B031A1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				49F9E4AE1F7DA58F00DA4D3A /* Detail */,
 				49F292611F7D90A300B031A1 /* List */,
 			);
 			path = Screens;
@@ -224,6 +229,15 @@
 				49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		49F9E4AE1F7DA58F00DA4D3A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				49F9E4AF1F7DA59E00DA4D3A /* Detail.storyboard */,
+				49F9E4B11F7DA5B000DA4D3A /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		6FE07F3361CFFE47088DCE55 /* Pods */ = {
@@ -339,6 +353,7 @@
 				49F2925F1F7D8F6F00B031A1 /* LaunchScreen.storyboard in Resources */,
 				49F292631F7D90E800B031A1 /* List.storyboard in Resources */,
 				49F292721F7D978800B031A1 /* lexicon.json in Resources */,
+				49F9E4B01F7DA59E00DA4D3A /* Detail.storyboard in Resources */,
 				49F292381F7D8A6300B031A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +510,7 @@
 				49F292551F7D8C1700B031A1 /* main.swift in Sources */,
 				49F9E4A21F7D9CC100DA4D3A /* ListPresenter.swift in Sources */,
 				49F9E4A01F7D9CAF00DA4D3A /* ListModel.swift in Sources */,
+				49F9E4B21F7DA5B000DA4D3A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
