@@ -9,16 +9,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Title-->
         <scene sceneID="CQr-cM-7Kk">
             <objects>
-                <viewController id="5ao-MT-jWz" customClass="DetailViewController" customModule="Lexicon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1hz-rT-ar8">
+                <viewController storyboardIdentifier="Detail" id="5ao-MT-jWz" customClass="DetailViewController" customModule="Lexicon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jjd-Tb-zP6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGL-yi-cxi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="R1s-TU-E3a"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GGL-yi-cxi" secondAttribute="bottom" id="0L9-Sb-5Rn"/>
+                            <constraint firstItem="t61-xv-qPj" firstAttribute="trailing" secondItem="GGL-yi-cxi" secondAttribute="trailing" id="CAx-yY-r9O"/>
+                            <constraint firstItem="GGL-yi-cxi" firstAttribute="leading" secondItem="t61-xv-qPj" secondAttribute="leading" id="qCZ-2E-J1K"/>
+                            <constraint firstItem="GGL-yi-cxi" firstAttribute="top" secondItem="jjd-Tb-zP6" secondAttribute="top" id="uHk-v2-1pl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t61-xv-qPj"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="zuA-3n-xrT"/>
+                    <connections>
+                        <outlet property="definitionTextView" destination="GGL-yi-cxi" id="09o-vt-IV4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RbU-W7-hfr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

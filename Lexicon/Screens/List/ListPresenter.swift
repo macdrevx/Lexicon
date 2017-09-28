@@ -10,11 +10,17 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+protocol ListPresenterDelegate: AnyObject {
+    func listPresenter(_ presenter: ListPresenterType, didSelectItemWithId id: Int)
+}
+
 protocol ListPresenterType: AnyObject {
     func bind(_ viewController: ListViewControllerType)
 }
 
 final class ListPresenter: ListPresenterType {
+
+    weak var delegate: ListPresenterDelegate?
 
     private let model: ListModelType
     private let disposeBag = DisposeBag()
@@ -30,6 +36,12 @@ final class ListPresenter: ListPresenterType {
 
         model
             .drive()
+            .disposed(by: disposeBag)
+
+        viewController.listItemSelected
+            .drive(onNext: { [unowned self] (listItem) in
+                self.delegate?.listPresenter(self, didSelectItemWithId: listItem.id)
+            })
             .disposed(by: disposeBag)
     }
 }

@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol ListViewControllerType: AnyObject {
+    var listItemSelected: Driver<ListItem> { get }
     func driveTableView(with driver: Driver<[ListItem]>) -> Disposable
 }
 
@@ -20,9 +21,20 @@ final class ListViewController: UIViewController, ListViewControllerType {
 
     @IBOutlet var tableView: UITableView!
 
+    var listItemSelected: Driver<ListItem> {
+        return tableView.rx.modelSelected(ListItem.self).asDriver()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.bind(self)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: animated)
+        }
     }
 
     func driveTableView(with driver: Driver<[ListItem]>) -> Disposable {
