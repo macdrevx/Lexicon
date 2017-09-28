@@ -11,12 +11,16 @@
 		49F292311F7D8A6300B031A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292301F7D8A6300B031A1 /* AppDelegate.swift */; };
 		49F292331F7D8A6300B031A1 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292321F7D8A6300B031A1 /* ListViewController.swift */; };
 		49F292381F7D8A6300B031A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F292371F7D8A6300B031A1 /* Assets.xcassets */; };
-		49F292461F7D8A6300B031A1 /* LexiconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292451F7D8A6300B031A1 /* LexiconTests.swift */; };
 		49F292551F7D8C1700B031A1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292541F7D8C1700B031A1 /* main.swift */; };
 		49F292571F7D8C3500B031A1 /* MockAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292561F7D8C3500B031A1 /* MockAppDelegate.swift */; };
 		49F2925C1F7D8F2000B031A1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2925B1F7D8F2000B031A1 /* R.generated.swift */; };
 		49F2925F1F7D8F6F00B031A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F2925D1F7D8F6F00B031A1 /* LaunchScreen.storyboard */; };
 		49F292631F7D90E800B031A1 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F292621F7D90E800B031A1 /* List.storyboard */; };
+		49F292651F7D922100B031A1 /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292641F7D922100B031A1 /* Lexicon.swift */; };
+		49F292671F7D922800B031A1 /* LexiconEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292661F7D922800B031A1 /* LexiconEntry.swift */; };
+		49F292691F7D925300B031A1 /* LexiconEntriesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292681F7D925300B031A1 /* LexiconEntriesSource.swift */; };
+		49F2926D1F7D92C500B031A1 /* LexiconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2926C1F7D92C500B031A1 /* LexiconTests.swift */; };
+		49F2926F1F7D931400B031A1 /* LexiconEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */; };
 		EB57CFAB97E8110348DDC1C6 /* Pods_Lexicon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532746F3622DA13687E41D3 /* Pods_Lexicon.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,13 +44,18 @@
 		49F292371F7D8A6300B031A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F2923C1F7D8A6300B031A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49F292411F7D8A6300B031A1 /* LexiconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexiconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49F292451F7D8A6300B031A1 /* LexiconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconTests.swift; sourceTree = "<group>"; };
 		49F292471F7D8A6300B031A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49F292541F7D8C1700B031A1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		49F292561F7D8C3500B031A1 /* MockAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppDelegate.swift; sourceTree = "<group>"; };
 		49F2925B1F7D8F2000B031A1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		49F2925E1F7D8F6F00B031A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49F292621F7D90E800B031A1 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
+		49F292641F7D922100B031A1 /* Lexicon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexicon.swift; sourceTree = "<group>"; };
+		49F292661F7D922800B031A1 /* LexiconEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconEntry.swift; sourceTree = "<group>"; };
+		49F292681F7D925300B031A1 /* LexiconEntriesSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconEntriesSource.swift; sourceTree = "<group>"; };
+		49F2926A1F7D928200B031A1 /* lexicon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lexicon.json; sourceTree = "<group>"; };
+		49F2926C1F7D92C500B031A1 /* LexiconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconTests.swift; sourceTree = "<group>"; };
+		49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconEntryTests.swift; sourceTree = "<group>"; };
 		75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C814C431173AE54FCFD43FC /* Pods_LexiconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexiconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +116,6 @@
 		49F292441F7D8A6300B031A1 /* LexiconTests */ = {
 			isa = PBXGroup;
 			children = (
-				49F292451F7D8A6300B031A1 /* LexiconTests.swift */,
 				49F292471F7D8A6300B031A1 /* Info.plist */,
 			);
 			path = LexiconTests;
@@ -122,6 +130,7 @@
 				49F292561F7D8C3500B031A1 /* MockAppDelegate.swift */,
 				49F2923C1F7D8A6300B031A1 /* Info.plist */,
 				49F2925B1F7D8F2000B031A1 /* R.generated.swift */,
+				49F2926A1F7D928200B031A1 /* lexicon.json */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -137,6 +146,9 @@
 		49F292521F7D8BD600B031A1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				49F2926B1F7D92B800B031A1 /* Tests */,
+				49F292641F7D922100B031A1 /* Lexicon.swift */,
+				49F292661F7D922800B031A1 /* LexiconEntry.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -144,6 +156,7 @@
 		49F292531F7D8BE200B031A1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				49F292681F7D925300B031A1 /* LexiconEntriesSource.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -155,6 +168,15 @@
 				49F292321F7D8A6300B031A1 /* ListViewController.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		49F2926B1F7D92B800B031A1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				49F2926C1F7D92C500B031A1 /* LexiconTests.swift */,
+				49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		6FE07F3361CFFE47088DCE55 /* Pods */ = {
@@ -412,6 +434,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F292651F7D922100B031A1 /* Lexicon.swift in Sources */,
+				49F292671F7D922800B031A1 /* LexiconEntry.swift in Sources */,
+				49F292691F7D925300B031A1 /* LexiconEntriesSource.swift in Sources */,
 				49F292331F7D8A6300B031A1 /* ListViewController.swift in Sources */,
 				49F292311F7D8A6300B031A1 /* AppDelegate.swift in Sources */,
 				49F2925C1F7D8F2000B031A1 /* R.generated.swift in Sources */,
@@ -424,7 +449,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49F292461F7D8A6300B031A1 /* LexiconTests.swift in Sources */,
+				49F2926D1F7D92C500B031A1 /* LexiconTests.swift in Sources */,
+				49F2926F1F7D931400B031A1 /* LexiconEntryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
