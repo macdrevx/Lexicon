@@ -21,6 +21,9 @@
 		49F292691F7D925300B031A1 /* LexiconEntriesSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292681F7D925300B031A1 /* LexiconEntriesSource.swift */; };
 		49F2926D1F7D92C500B031A1 /* LexiconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2926C1F7D92C500B031A1 /* LexiconTests.swift */; };
 		49F2926F1F7D931400B031A1 /* LexiconEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */; };
+		49F292711F7D975D00B031A1 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292701F7D975D00B031A1 /* ListItem.swift */; };
+		49F292721F7D978800B031A1 /* lexicon.json in Resources */ = {isa = PBXBuildFile; fileRef = 49F2926A1F7D928200B031A1 /* lexicon.json */; };
+		49F292751F7D97EE00B031A1 /* ListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292741F7D97EE00B031A1 /* ListItemTests.swift */; };
 		EB57CFAB97E8110348DDC1C6 /* Pods_Lexicon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532746F3622DA13687E41D3 /* Pods_Lexicon.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +59,8 @@
 		49F2926A1F7D928200B031A1 /* lexicon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lexicon.json; sourceTree = "<group>"; };
 		49F2926C1F7D92C500B031A1 /* LexiconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconTests.swift; sourceTree = "<group>"; };
 		49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconEntryTests.swift; sourceTree = "<group>"; };
+		49F292701F7D975D00B031A1 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		49F292741F7D97EE00B031A1 /* ListItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTests.swift; sourceTree = "<group>"; };
 		75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C814C431173AE54FCFD43FC /* Pods_LexiconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexiconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,13 +129,13 @@
 		49F292501F7D8BC500B031A1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				49F2925D1F7D8F6F00B031A1 /* LaunchScreen.storyboard */,
-				49F292301F7D8A6300B031A1 /* AppDelegate.swift */,
-				49F292541F7D8C1700B031A1 /* main.swift */,
-				49F292561F7D8C3500B031A1 /* MockAppDelegate.swift */,
 				49F2923C1F7D8A6300B031A1 /* Info.plist */,
-				49F2925B1F7D8F2000B031A1 /* R.generated.swift */,
+				49F292541F7D8C1700B031A1 /* main.swift */,
+				49F292301F7D8A6300B031A1 /* AppDelegate.swift */,
+				49F292561F7D8C3500B031A1 /* MockAppDelegate.swift */,
 				49F2926A1F7D928200B031A1 /* lexicon.json */,
+				49F2925D1F7D8F6F00B031A1 /* LaunchScreen.storyboard */,
+				49F2925B1F7D8F2000B031A1 /* R.generated.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -164,8 +169,10 @@
 		49F292611F7D90A300B031A1 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				49F292731F7D97E100B031A1 /* Tests */,
 				49F292621F7D90E800B031A1 /* List.storyboard */,
 				49F292321F7D8A6300B031A1 /* ListViewController.swift */,
+				49F292701F7D975D00B031A1 /* ListItem.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -175,6 +182,14 @@
 			children = (
 				49F2926C1F7D92C500B031A1 /* LexiconTests.swift */,
 				49F2926E1F7D931400B031A1 /* LexiconEntryTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		49F292731F7D97E100B031A1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				49F292741F7D97EE00B031A1 /* ListItemTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -291,6 +306,7 @@
 			files = (
 				49F2925F1F7D8F6F00B031A1 /* LaunchScreen.storyboard in Resources */,
 				49F292631F7D90E800B031A1 /* List.storyboard in Resources */,
+				49F292721F7D978800B031A1 /* lexicon.json in Resources */,
 				49F292381F7D8A6300B031A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +453,7 @@
 				49F292651F7D922100B031A1 /* Lexicon.swift in Sources */,
 				49F292671F7D922800B031A1 /* LexiconEntry.swift in Sources */,
 				49F292691F7D925300B031A1 /* LexiconEntriesSource.swift in Sources */,
+				49F292711F7D975D00B031A1 /* ListItem.swift in Sources */,
 				49F292331F7D8A6300B031A1 /* ListViewController.swift in Sources */,
 				49F292311F7D8A6300B031A1 /* AppDelegate.swift in Sources */,
 				49F2925C1F7D8F2000B031A1 /* R.generated.swift in Sources */,
@@ -450,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49F2926D1F7D92C500B031A1 /* LexiconTests.swift in Sources */,
+				49F292751F7D97EE00B031A1 /* ListItemTests.swift in Sources */,
 				49F2926F1F7D931400B031A1 /* LexiconEntryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

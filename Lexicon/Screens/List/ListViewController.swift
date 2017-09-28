@@ -12,4 +12,20 @@ import RxCocoa
 
 final class ListViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    private let disposeBag = DisposeBag()
+    private let lexiconSource = LexiconSource()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        lexiconSource.observable
+            .map { (lexicon) in
+                lexicon.entries.map { ListItem(id: $0.id, title: $0.name) }
+            }
+            .asDriver(onErrorDriveWith: .never())
+            .drive(tableView.rx.items(cellIdentifier: R.reuseIdentifier.listItem.identifier, cellType: UITableViewCell.self)) { (_, item, cell) in
+                cell.textLabel?.text = item.title
+            }
+            .disposed(by: disposeBag)
+    }
 }
