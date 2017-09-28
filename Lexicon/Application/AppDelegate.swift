@@ -15,7 +15,16 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        let lexiconSource = LexiconSource()
+        let transformer = ListTransformer()
+        let model = ListModel(
+            initialState: ListState(lexicon: nil),
+            lexiconSource: lexiconSource,
+            transformer: transformer)
+        let presenter = ListPresenter(
+            model: model)
         let listViewController = R.storyboard.list.list()!
+        listViewController.presenter = presenter
 
         let navigationController = UINavigationController(rootViewController: listViewController)
         navigationController.navigationBar.prefersLargeTitles = true
