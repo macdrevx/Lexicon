@@ -8,7 +8,12 @@
 
 import Foundation
 
-final class ListTransformer {
+protocol ListTransformerType {
+    func reduce(event: ListState.Event, state: ListState) -> ListState
+    func items(with state: ListState) -> [ListItem]
+}
+
+final class ListTransformer: ListTransformerType {
     func reduce(event: ListState.Event, state: ListState) -> ListState {
         var updatedState = state
         switch event {

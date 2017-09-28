@@ -30,6 +30,8 @@
 		49F9E4A41F7D9D0200DA4D3A /* ListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A31F7D9D0200DA4D3A /* ListState.swift */; };
 		49F9E4A61F7DA0F500DA4D3A /* ListTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A51F7DA0F500DA4D3A /* ListTransformerTests.swift */; };
 		49F9E4A81F7DA18C00DA4D3A /* ListStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A71F7DA18C00DA4D3A /* ListStateTests.swift */; };
+		49F9E4AA1F7DA29500DA4D3A /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4A91F7DA29500DA4D3A /* ListViewControllerTests.swift */; };
+		49F9E4AD1F7DA48D00DA4D3A /* MockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */; };
 		EB57CFAB97E8110348DDC1C6 /* Pods_Lexicon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532746F3622DA13687E41D3 /* Pods_Lexicon.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		49F9E4A31F7D9D0200DA4D3A /* ListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListState.swift; sourceTree = "<group>"; };
 		49F9E4A51F7DA0F500DA4D3A /* ListTransformerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransformerTests.swift; sourceTree = "<group>"; };
 		49F9E4A71F7DA18C00DA4D3A /* ListStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStateTests.swift; sourceTree = "<group>"; };
+		49F9E4A91F7DA29500DA4D3A /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
+		49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockListPresenter.swift; sourceTree = "<group>"; };
 		75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C814C431173AE54FCFD43FC /* Pods_LexiconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexiconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		49F292611F7D90A300B031A1 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				49F9E4AB1F7DA47700DA4D3A /* Mocks */,
 				49F292731F7D97E100B031A1 /* Tests */,
 				49F292621F7D90E800B031A1 /* List.storyboard */,
 				49F292321F7D8A6300B031A1 /* ListViewController.swift */,
@@ -208,8 +213,17 @@
 				49F292741F7D97EE00B031A1 /* ListItemTests.swift */,
 				49F9E4A51F7DA0F500DA4D3A /* ListTransformerTests.swift */,
 				49F9E4A71F7DA18C00DA4D3A /* ListStateTests.swift */,
+				49F9E4A91F7DA29500DA4D3A /* ListViewControllerTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		49F9E4AB1F7DA47700DA4D3A /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				49F9E4AC1F7DA48D00DA4D3A /* MockListPresenter.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		6FE07F3361CFFE47088DCE55 /* Pods */ = {
@@ -488,6 +502,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F9E4AA1F7DA29500DA4D3A /* ListViewControllerTests.swift in Sources */,
+				49F9E4AD1F7DA48D00DA4D3A /* MockListPresenter.swift in Sources */,
 				49F2926D1F7D92C500B031A1 /* LexiconTests.swift in Sources */,
 				49F9E4A81F7DA18C00DA4D3A /* ListStateTests.swift in Sources */,
 				49F292751F7D97EE00B031A1 /* ListItemTests.swift in Sources */,

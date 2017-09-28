@@ -10,10 +10,15 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ListModel {
+protocol ListModelType {
+    var items: Driver<[ListItem]> { get }
+    func drive() -> Disposable
+}
 
-    private let lexiconSource: LexiconSource
-    private let transformer: ListTransformer
+final class ListModel: ListModelType {
+
+    private let lexiconSource: LexiconSourceType
+    private let transformer: ListTransformerType
     private let stateSubject = ReplaySubject<ListState>.create(bufferSize: 1)
 
     var items: Driver<[ListItem]> {
@@ -21,15 +26,11 @@ final class ListModel {
     }
 
     init(initialState: ListState,
-         lexiconSource: LexiconSource,
-         transformer: ListTransformer) {
+         lexiconSource: LexiconSourceType,
+         transformer: ListTransformerType) {
         self.lexiconSource = lexiconSource
         self.transformer = transformer
         stateSubject.onNext(initialState)
-    }
-
-    func setInitialState(_ state: ListState) {
-        stateSubject.onNext(state)
     }
 
     func drive() -> Disposable {

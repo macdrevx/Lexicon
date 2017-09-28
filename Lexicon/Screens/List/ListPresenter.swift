@@ -10,16 +10,20 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class ListPresenter {
+protocol ListPresenterType: AnyObject {
+    func bind(_ viewController: ListViewControllerType)
+}
 
-    private let model: ListModel
+final class ListPresenter: ListPresenterType {
+
+    private let model: ListModelType
     private let disposeBag = DisposeBag()
 
-    init(model: ListModel) {
+    init(model: ListModelType) {
         self.model = model
     }
 
-    func bind(_ viewController: ListViewController) {
+    func bind(_ viewController: ListViewControllerType) {
         viewController
             .driveTableView(with: model.items)
             .disposed(by: disposeBag)

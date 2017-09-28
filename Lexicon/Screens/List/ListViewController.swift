@@ -10,9 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class ListViewController: UIViewController {
+protocol ListViewControllerType: AnyObject {
+    func driveTableView(with driver: Driver<[ListItem]>) -> Disposable
+}
 
-    var presenter: ListPresenter!
+final class ListViewController: UIViewController, ListViewControllerType {
+
+    var presenter: ListPresenterType!
 
     @IBOutlet var tableView: UITableView!
 
