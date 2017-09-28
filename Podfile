@@ -6,6 +6,7 @@ target 'Lexicon' do
 
   pod 'RxCocoa'
   pod 'RxSwift'
+  pod 'R.swift'
 
   target 'LexiconTests' do
     inherit! :search_paths

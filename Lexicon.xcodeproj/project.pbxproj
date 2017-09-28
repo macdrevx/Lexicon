@@ -14,6 +14,7 @@
 		49F292381F7D8A6300B031A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F292371F7D8A6300B031A1 /* Assets.xcassets */; };
 		49F2923B1F7D8A6300B031A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F292391F7D8A6300B031A1 /* LaunchScreen.storyboard */; };
 		49F292461F7D8A6300B031A1 /* LexiconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292451F7D8A6300B031A1 /* LexiconTests.swift */; };
+		49F2925A1F7D8E6700B031A1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F292591F7D8E6700B031A1 /* R.generated.swift */; };
 		EB57CFAB97E8110348DDC1C6 /* Pods_Lexicon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1532746F3622DA13687E41D3 /* Pods_Lexicon.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		49F292411F7D8A6300B031A1 /* LexiconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexiconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F292451F7D8A6300B031A1 /* LexiconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconTests.swift; sourceTree = "<group>"; };
 		49F292471F7D8A6300B031A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F292591F7D8E6700B031A1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.release.xcconfig"; sourceTree = "<group>"; };
 		7C814C431173AE54FCFD43FC /* Pods_LexiconTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LexiconTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LexiconTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LexiconTests/Pods-LexiconTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				49F292371F7D8A6300B031A1 /* Assets.xcassets */,
 				49F292391F7D8A6300B031A1 /* LaunchScreen.storyboard */,
 				49F2923C1F7D8A6300B031A1 /* Info.plist */,
+				49F292591F7D8E6700B031A1 /* R.generated.swift */,
 			);
 			path = Lexicon;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildConfigurationList = 49F2924A1F7D8A6300B031A1 /* Build configuration list for PBXNativeTarget "Lexicon" */;
 			buildPhases = (
 				7E8D0CD26D3864E6B82FBDA4 /* [CP] Check Pods Manifest.lock */,
+				49F292581F7D8D2B00B031A1 /* R.swift */,
 				49F292291F7D8A6300B031A1 /* Sources */,
 				49F2922A1F7D8A6300B031A1 /* Frameworks */,
 				49F2922B1F7D8A6300B031A1 /* Resources */,
@@ -255,11 +259,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lexicon/Pods-Lexicon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -267,6 +273,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lexicon/Pods-Lexicon-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		49F292581F7D8D2B00B031A1 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"\nmv \"$SRCROOT\"/R.generated.swift \"$SRCROOT\"/Lexicon/\n";
 		};
 		7E8D0CD26D3864E6B82FBDA4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -348,6 +368,7 @@
 			files = (
 				49F292331F7D8A6300B031A1 /* ViewController.swift in Sources */,
 				49F292311F7D8A6300B031A1 /* AppDelegate.swift in Sources */,
+				49F2925A1F7D8E6700B031A1 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +553,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFDE8D0778E2FC3F539D22DD /* Pods-LexiconTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XP78X9469Y;
@@ -550,7 +570,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75B092E0EFBF38C57E827549 /* Pods-LexiconTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XP78X9469Y;
